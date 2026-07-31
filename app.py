@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 new_model = YOLO("best.pt")
 
-st.title("Skin pimples Detecter App")
+st.title("Skin acne Detecter App")
 st.write("Upload an image to detect bone's fractures")
 
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
@@ -27,6 +27,3 @@ if uploaded_file is not None:
                 image = st.image(
                     res_plotted, channels="BGR", use_container_width=True, caption="Predicted Image"
                 )
-                
-# docker build -t bone-fracture-app .
-# docker run -p 8501:8501 bone-fracture-app
